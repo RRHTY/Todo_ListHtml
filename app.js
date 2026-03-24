@@ -48,6 +48,12 @@ class App {
             this.currentFilter.priority = priority;
             this.render();
         });
+
+        // 绑定导出按钮事件
+        const exportBtn = document.getElementById('export-btn');
+        exportBtn.addEventListener('click', () => {
+            this.controller.exportTasks();
+        });
     }
 
     render() {

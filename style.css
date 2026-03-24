@@ -25,6 +25,24 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+.header-actions {
+    margin-left: 20px;
+}
+
+#export-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #17a2b8;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#export-btn:hover {
+    background-color: #138496;
+}
+
 #search-input {
     padding: 8px 12px;
     border: 1px solid #ddd;
