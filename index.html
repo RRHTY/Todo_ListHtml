@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项列表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>待办事项列表</h1>
+            <input type="text" id="search-input" placeholder="搜索任务...">
+        </header>
+        
+        <main>
+            <aside>
+                <div class="category-filter">
+                    <h3>分类</h3>
+                    <div class="category-item active" data-category="all">全部</div>
+                    <div class="category-item" data-category="工作">工作</div>
+                    <div class="category-item" data-category="生活">生活</div>
+                    <div class="category-item" data-category="学习">学习</div>
+                </div>
+                
+                <div class="priority-filter">
+                    <h3>优先级</h3>
+                    <div class="priority-item active" data-priority="all">全部</div>
+                    <div class="priority-item high" data-priority="high">高</div>
+                    <div class="priority-item medium" data-priority="medium">中</div>
+                    <div class="priority-item low" data-priority="low">低</div>
+                </div>
+            </aside>
+            
+            <section>
+                <div class="task-stats">
+                    <span>总计: <span id="total-count">0</span></span>
+                    <span>已完成: <span id="completed-count">0</span></span>
+                    <span>未完成: <span id="pending-count">0</span></span>
+                </div>
+                
+                <div id="task-list"></div>
+                
+                <div class="add-task">
+                    <input type="text" id="new-task-input" placeholder="添加新任务...">
+                    <select id="new-task-category">
+                        <option value="工作">工作</option>
+                        <option value="生活">生活</option>
+                        <option value="学习">学习</option>
+                    </select>
+                    <select id="new-task-priority">
+                        <option value="medium">中</option>
+                        <option value="high">高</option>
+                        <option value="low">低</option>
+                    </select>
+                    <button id="add-task-btn">添加</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="models/Task.js"></script>
+    <script src="controllers/TaskController.js"></script>
+    <script src="views/TaskView.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
