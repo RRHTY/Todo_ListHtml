@@ -231,3 +231,36 @@ section {
 #add-task-btn:hover {
     background-color: #218838;
 }
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    aside {
+        width: 100%;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+    
+    .header-actions {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .add-task {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #new-task-input, #new-task-category, #new-task-priority {
+        width: 100%;
+    }
+}
