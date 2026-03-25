@@ -10,4 +10,5 @@ class Task {
     }
 }
 
-export default Task;
+// 暴露到全局
+window.Task = Task;

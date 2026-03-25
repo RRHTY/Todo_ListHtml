@@ -1,6 +1,4 @@
 // controllers/TaskController.js
-import Task from '../models/Task.js';
-
 class TaskController {
     constructor() {
         this.tasks = this.loadTasks();
@@ -81,4 +79,5 @@ class TaskController {
     }
 }
 
-export default TaskController;
+// 暴露到全局
+window.TaskController = TaskController;

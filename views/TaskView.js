@@ -121,4 +121,5 @@ class TaskView {
     }
 }
 
-export default TaskView;
+// 暴露到全局
+window.TaskView = TaskView;
